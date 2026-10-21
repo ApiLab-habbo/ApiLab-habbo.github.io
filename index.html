@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Acesso ao Habbo API Lab.">
+  <title>Acesso — Habbo API Lab</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-auth">
+
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="Habbo API Lab — início">
+        <span class="brand-icon" aria-hidden="true">
+          <img src="icon.png" alt="" width="32" height="32">
+        </span>
+        <span class="brand-text">
+          <strong>Habbo API Lab</strong>
+          <small>Ferramenta pessoal para gerenciar variáveis da API do Habbo</small>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main class="main-content main-content-auth" id="main-content">
+
+    <section class="panel panel-auth" aria-labelledby="auth-title">
+
+      <div class="panel-header">
+        <h1 id="auth-title" class="auth-title">Acesso à API</h1>
+        <p class="panel-description">
+          Informe o ID do quarto e as duas chaves de API para utilizar o laboratório.
+          A chave de leitura é usada para consultar dados; a chave de escrita, para modificá-los.
+        </p>
+      </div>
+
+      <div
+        id="login-error"
+        class="alert alert-danger"
+        role="alert"
+        hidden
+      >
+        <strong class="alert-title">Não foi possível continuar</strong>
+        <p class="alert-message"></p>
+      </div>
+
+      <form
+        id="login-form"
+        class="auth-form"
+        action="#"
+        method="post"
+      >
+
+        <div class="field">
+          <label for="room-id">ID do quarto</label>
+          <input
+            id="room-id"
+            name="room-id"
+            type="text"
+            placeholder="Ex.: 12345678"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="read-api-key">Chave API para leitura</label>
+          <input
+            id="read-api-key"
+            name="read-api-key"
+            type="password"
+            placeholder="Cole sua chave de leitura"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="write-api-key">Chave API para escrita</label>
+          <input
+            id="write-api-key"
+            name="write-api-key"
+            type="password"
+            placeholder="Cole sua chave de escrita"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          >
+        </div>
+
+        <button
+          id="login-submit"
+          type="submit"
+          class="action-button action-button-primary auth-submit"
+        >
+          Continuar
+        </button>
+
+      </form>
+
+      <p class="auth-hint">
+        As chaves são utilizadas apenas para autenticar as requisições realizadas pelo laboratório.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
