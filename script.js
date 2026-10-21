@@ -8,7 +8,7 @@ const apiEscrito = sessionStorage.getItem("apiEscrito");
 let dadosGlobaisCarregados = {};
 let dadosUsuarioCarregados = {};
 let dadosMobiCarregados = {};
-let usuarioAtual = null;
+let usuarioAtual = null; 
 let nomesDeVariaveisDisponiveis = []; 
 let perfilUsuarioExiste = false;
 
